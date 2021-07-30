@@ -1,0 +1,26 @@
+<h3>Nova Categoria</h3>
+
+{{!-- Erros --}}
+    {{#each erros}}
+        <div class="alert alert-warning">{{texto}}</div>
+    {{else}}
+
+    {{/each}}
+
+{{!-- Card de Cadastro --}}
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/categorias/nova" method="POST">
+        {{!-- Nome --}}
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome da Categoria" class="form-control">
+        {{!-- Slug --}}
+            <br>
+            <label for="slug">Slug:</label>
+            <input type="text" id="slug" name="slug" placeholder="Slug da Categoria" class="form-control">
+        {{!-- Botão --}}
+            <br>
+            <button type="submit" class="btn btn-primary">Criar Categoria</button>
+        </form>
+    </div>
+</div>
